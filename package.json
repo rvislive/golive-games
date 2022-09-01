@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/rvislive/golive-games#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
-    "mongoose": "^6.5.3"
+    "mongoose": "^6.5.3",
+    "socket.io": "^4.5.1"
   }
 }
