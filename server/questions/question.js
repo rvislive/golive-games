@@ -24,7 +24,7 @@ const getRandomQuestions = async () => {
 const submitAnswer = async (userName, roomName, answers) => {
     try {
         let marks = 0;
-        answers.forEach((id, ans) => {
+        answers.forEach(async (id, ans) => {
             const correctAns = await QuestionModel.findOne({ _id: id }, { correctIndex: 1 }).lean().exec();
             if(correctAns.correctIndex === ans) marks++;
         });

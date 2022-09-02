@@ -13,8 +13,8 @@ const getUser = async (name) => {
 // add-or-update-user
 const addUpdateUser = async (reqBody) => {
     try {
-        if(reqBody._id) {
-            await UserModel.updateOne({ name: reqBody.name}, reqBody); 
+        if(reqBody[0]._id) {
+            await UserModel.updateOne({ name: reqBody[0].userName}, reqBody); 
         } else {
             await UserModel.create(reqBody);
         }

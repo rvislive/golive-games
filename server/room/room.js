@@ -16,17 +16,6 @@ const joinRoom = async (userName, roomName) => {
     }
 }
 
-// check Answer
-const showAnswer = async (userName, roomName) => {
-    try {
-        const markData = await UserModel.findOne({ name: userName, roomName: roomName}, { marks : 1 }).lean().exec();
-        return markData.marks; 
-    } catch (error) {
-        throw error; 
-    }
-}
-
 module.exports = {
-    joinRoom,
-    showAnswer
+    joinRoom
 } 
